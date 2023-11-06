@@ -15,7 +15,7 @@ INNER_CIRCLE_RADIUS = 0.9
 OUTER_CIRCLE_RADIUS = 2.4  # Some tokens are at 1200ish, others at 1270ish
 TOKENS_PER_CIRCLE = 6
 PEDESTAL_COLOR = (0x80, 0x80, 0x80)
-
+  
 
 class GoldToken(Token):
     def __init__(self, arena, marker_number):
@@ -35,7 +35,7 @@ class SilverToken(Token):
     @property
     def surface_name(self):
         return 'sr/token_silver_grabbed.png' if self.grabbed else 'sr/token_silver.png'
-
+        
 
 class TwoColoursAssignmentArena(Arena):
     size = (5.75, 5.75)
@@ -49,10 +49,10 @@ class TwoColoursAssignmentArena(Arena):
                       0.75 * pi,
                       -0.75 * pi,
                       -0.25 * pi]
-
+    
     def __init__(self, objects=None, wall_markers=False):
         super(TwoColoursAssignmentArena, self).__init__(objects, wall_markers)
-
+        
         def place_token_circle(radius, number_offset=0, angle_offset=0.25 * pi,
                                rotate_silvers=0.0):
             for i in range(TOKENS_PER_CIRCLE):
@@ -66,6 +66,10 @@ class TwoColoursAssignmentArena(Arena):
 
         place_token_circle(OUTER_CIRCLE_RADIUS, number_offset=TOKENS_PER_CIRCLE,
                            angle_offset=1.5 * pi, rotate_silvers=pi / 4)
+       
+        
+        
+                           
 
     def draw_background(self, surface, display):
 
