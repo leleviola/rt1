@@ -64,7 +64,7 @@ Function to find the closest token that is in marker_list and not in marker_take
   - dist (float): distance of the closest token (-1 if no token is detected)
   - rot_y (float): angle between the robot and the token (-1 if no token is detected)
   - index (int): the index in marker_list of the token (-1 if no token is detected)
-  - 
+
 ### find_mindist_taken_token(marker_list, marker_taken)
 
 Function to find the closest token of tokens that are in marker_list and also in marker_taken
