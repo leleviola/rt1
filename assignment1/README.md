@@ -38,6 +38,58 @@ The main program is composed by the robot initialization, where are initialized 
 
 ## Functions
 
-For making coding simpler, I've realised some useful functions.
+For making coding simpler, I've used some useful functions.
+
+### drive(speed, seconds)
+
+Function for setting a linear velocity    
+Args: 
+  - speed (int): the speed of the wheels
+  - seconds (int): the time interval
+   
+### turn(speed, seconds)
+
+Function for setting an angular velocity    
+Args: 
+  - speed (int): the speed of the wheels
+  - seconds (int): the time interval
+
+### find_mindist_untaken_token(marker_list, marker_taken)
+
+Function to find the closest token that is in marker_list and not in marker_taken
+- Args:
+  - marker_list(list): the list of all markers seen by the robot
+  - marker_taken(list): the list of all the markers moved to the center
+- Returns:
+  - dist (float): distance of the closest token (-1 if no token is detected)
+  - rot_y (float): angle between the robot and the token (-1 if no token is detected)
+  - index (int): the index in marker_list of the token (-1 if no token is detected)
+  - 
+### find_mindist_taken_token(marker_list, marker_taken)
+
+Function to find the closest token of tokens that are in marker_list and also in marker_taken
+- Args:
+  - marker_list(list): the list of all markers seen by the robot
+  - marker_taken(list): the list of all the markers moved to the center
+- Returns:
+  - dist (float): distance of the closest token (-1 if no token is detected)
+  - rot_y (float): angle between the robot and the token (-1 if no token is detected)
+  - index (int): the index in marker_list of the token (-1 if no token is detected)
+### find_maxdist_token(marker_list)
+Function to find of the most distant token
+- Args:
+  - marker_list(list): the list of all markers seen by the robot
+
+- Returns:
+  - dist (float): distance (-1 if no token is detected)
+  - rot_y (float): angle between the robot and the token (-1 if no token is detected)
+  - index(int): the index of the element at max distance
+ 
+### find_same_token(list, mark)
+    
+    Function to determine if there is the token "mark" in the list of tokens "list".
+- Returns:
+  - True if "mark" is in "list"
+  - False if "mark" isn't in "list"
 
 ## Results and conclusions
