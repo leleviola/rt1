@@ -88,6 +88,9 @@ Function to find of the most distant token
 ### find_same_token(list, mark)
     
     Function to determine if there is the token "mark" in the list of tokens "list".
+- Args:
+ - list(list): is the list where it will search the token "mark"
+ - mark(Token): is the token to find
 - Returns:
   - True if "mark" is in "list"
   - False if "mark" isn't in "list"
