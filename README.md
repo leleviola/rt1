@@ -1,5 +1,5 @@
 # Research Track 1
-by Samuele Viola
+by leleviola
 
 This repository is dedicated to all my projects, made as a student at Università degli Studi di Genova, during the course **Research Track 1**.
 ## Assignment 1
