@@ -36,9 +36,12 @@ The main program is composed by the robot initialization, where are initialized 
   
   While markers is the variables that contains all the markers that the robot sees, marker_taken contains only the markers that are moved to the center. Doing this is easyer to determine wich of the markers that robot seen have been already moved and wich not.
   When the robot has to take a marker, it, using some function that will be described in the next section, checks if the token's distance is:
-  - =-1 => this means that the robot doesn't see any token;
-  - < a threshold value (0.4 or 0.6) => the robot grab/ungrab the token.
-It also checks if the angle between the robot and the token is
+- =-1 => this means that the robot doesn't see any token;
+- < a threshold value (0.4 or 0.6) => the robot grab/ungrab the token.
+It also checks if the angle between the robot and the token is:
+- -2 < angle < 2 => this means that the token is  straight in front of the robot so it has to toward it direction;
+- > 2 => turn right a bit
+- < -2 => turn left a bit
 </p>
 
 ## Functions
