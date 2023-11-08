@@ -13,8 +13,7 @@ grabbed = False # this variable indicates if he grabbed a token or not
 
 def drive(speed, seconds):
     """
-    Function for setting a linear velocity
-    
+    Function for setting a linear velocity   
     Args: speed (int): the speed of the wheels
 	  seconds (int): the time interval
     """
@@ -26,8 +25,7 @@ def drive(speed, seconds):
 
 def turn(speed, seconds):
     """
-    Function for setting an angular velocity
-    
+    Function for setting an angular velocity    
     Args: speed (int): the speed of the wheels
 	  seconds (int): the time interval
     """
@@ -40,7 +38,8 @@ def turn(speed, seconds):
 def find_mindist_untaken_token(marker_list, marker_taken):
     """
     Function to find the closest token that is in marker_list and not in marker_taken
-
+    Args: marker_list(list): the list of all markers seen by the robot
+        marker_taken(list): the list of all the markers moved to the center
     Returns:
 	dist (float): distance of the closest token (-1 if no token is detected)
     rot_y (float): angle between the robot and the token (-1 if no token is detected)
@@ -63,7 +62,8 @@ def find_mindist_untaken_token(marker_list, marker_taken):
 def find_mindist_taken_token(marker_list, marker_taken):
     """
     Function to find the closest token of tokens that are in marker_list and also in marker_taken
-
+    Args: marker_list(list): the list of all markers seen by the robot
+        marker_taken(list): the list of all the markers moved to the center
     Returns:
 	dist (float): distance of the closest token (-1 if no token is detected)
     rot_y (float): angle between the robot and the token (-1 if no token is detected)
@@ -86,10 +86,12 @@ def find_mindist_taken_token(marker_list, marker_taken):
 def find_maxdist_token(marker_list):
     """
     Function to find of the most distant token
+    Args: marker_list(list): the list of all markers seen by the robot
 
     Returns:
 	dist (float): distance (-1 if no token is detected)
     rot_y (float): angle between the robot and the token (-1 if no token is detected)
+    index(int): the index of the element at max distance
 
     """
     
@@ -108,7 +110,12 @@ def find_maxdist_token(marker_list):
     return maxdist, rot_y, indmax
 
 def find_same_token(list, mark):
-        
+    """
+    Function to determine if there is the token "mark" in the list of tokens "list".
+    Returns:
+    True if "mark" is in "list"
+    False if "mark" isn't in "list"
+    """
     for token in list:
         token_code = token.info.code
         if mark.info.code == token_code:
@@ -118,7 +125,7 @@ def find_same_token(list, mark):
 
 
 
-markers = R.see() #for calculate the radius
+markers = R.see() #for calculating radius
 
 marker_taken = [] # list
 
@@ -127,7 +134,8 @@ radius = find_maxdist_token(markers)[0]/2 # for first cycle we want to find the 
 print("robot initialized")
 while 1: # main cicle that repeats every time robot release a token
 
-    print("new cycle started")
+    print("new cycle started: let's move a toooooookenn")
+
     while(grabbed==False): 
         
         markers = R.see()
