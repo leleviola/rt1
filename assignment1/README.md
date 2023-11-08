@@ -107,3 +107,7 @@ Function to determine if there is the token "mark" in the list of tokens "list".
 
 ## Results and conclusions
 After having traveled the entire circle, and having moved all the tokens together, the robot should print a message in terminal and stop moving, and all the tokens are like in the following image. 
+<p align = "center">
+  <img src ="images/End.png">
+</p>
+Last commit 08 November 2023
