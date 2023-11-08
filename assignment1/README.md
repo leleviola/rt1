@@ -40,8 +40,8 @@ The main program is composed by the robot initialization, where are initialized 
 - < a threshold value (0.4 or 0.6) => the robot grab/ungrab the token.
 It also checks if the angle between the robot and the token is:
 - -2 < angle < 2 => this means that the token is  straight in front of the robot so it has to toward it direction;
-- > 2 => turn right a bit
-- < -2 => turn left a bit
+- major than 2 => turn right a bit
+- minor than -2 => turn left a bit
 </p>
 
 ## Functions
@@ -104,3 +104,4 @@ Function to determine if there is the token "mark" in the list of tokens "list".
   - False if "mark" isn't in "list"
 
 ## Results and conclusions
+After having traveled the entire circle, and having moved all the tokens together, the robot should print a message in terminal and stop moving, and all the tokens are like in the following image. 
