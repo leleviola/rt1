@@ -8,4 +8,3 @@ This assignment uses the SR Turtle Robot Simulator, written using Python languag
 ## Assigment 2
 (This project isn't already done)
 
-Last commit done on 6 November 2023
