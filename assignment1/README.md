@@ -42,6 +42,8 @@ It also checks if the angle between the robot and the token is:
 - -2 < angle < 2 => this means that the token is  straight in front of the robot so it has to toward it direction;
 - major than 2 => turn right a bit
 - minor than -2 => turn left a bit
+
+**I should specify that solution is built under the condition that there are 6 token all placed in circle, this means that if they are more than 6 or not placed in circle it isn't sure that this solution will works**.
 </p>
 
 ## Functions
