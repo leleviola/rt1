@@ -1,5 +1,7 @@
 # Assignment 1: "The 6 boxes"
 
+by leleviola
+
 ## Introduction
 
 There are 6 golden boxes all positioned in circle around a gray region, as shown in figure, and a mobile robot with an end effector. The robot's characteristics are described in the README in robot-sim folder. 
@@ -33,7 +35,10 @@ The main program is composed by the robot initialization, where are initialized 
   <img src = "images/Flowchart.png">
   
   While markers is the variables that contains all the markers that the robot sees, marker_taken contains only the markers that are moved to the center. Doing this is easyer to determine wich of the markers that robot seen have been already moved and wich not.
-  
+  When the robot has to take a marker, it, using some function that will be described in the next section, checks if the token's distance is:
+  - =-1 => this means that the robot doesn't see any token;
+  - < a threshold value (0.4 or 0.6) => the robot grab/ungrab the token.
+It also checks if the angle between the robot and the token is
 </p>
 
 ## Functions
